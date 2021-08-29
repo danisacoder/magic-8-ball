@@ -9,16 +9,18 @@ const advice = [
     "You know what the trouble about real life is? There's no danger music."
 ]
 
-// generate random light colors:
-    // adviceEye.style.backgroundColor = randomcolor({luminosity: 'light'})
 
-// var randomColor = require('randomcolor'); // import the script
-// var color = randomColor(); // a hex code for an attractive color
+//User typing questions on the input
+const adviceField = document.getElementById("question");
 
-const adviceBtn = document.querySelector("button");
+
+//User clicking the advise button
+const adviceBtn = document.getElementById("submit");
 const adviceTxt = document.querySelector("p");
 
+//Function that allows answer to be populated
 adviceBtn.addEventListener("click", function() {
-  let randomNum = Math.floor(Math.random() * 6)
-  adviceTxt.innerHTML = (advice[randomNum])
+  let randomNum = Math.floor(Math.random() * 6);
+  adviceTxt.innerHTML = (advice[randomNum]);
+  adviceField.value = " ";
 })
