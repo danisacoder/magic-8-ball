@@ -5,8 +5,16 @@
   /* 20% {
     transform: translateX(-68px) translateY(50px) skewX(15deg) skewY(-10deg) scale(0.95);
   } */
-  20% {
+  50% {
     transform: translateX(120px) translateY(-40px) skewX(10deg) skewY(2deg) scaleX(0.55);
+  }
+
+  51% {
+    transform: translateX(-120px) translateY(40px) skewX(10deg) skewY(2deg) scaleX(0.55);
+  }
+
+  100% {
+    transform: none;
   }
 }
 
@@ -54,10 +62,11 @@
   background: white;
   transform: translateX(68px) translateY(-60px) skewX(15deg) skewY(2deg);
   position: absolute;
-  animation: move-eye-skew 5s ease-out infinite;
+  animation:
+    move-eye-skew 2s;
   font-size: 10px;
 }
-.iris:before {
+/* .iris:before {
   content: "";
   display: block;
   position: absolute;
@@ -67,7 +76,7 @@
   top: 31.25%;
   left: 31.25%;
   background: black;
-}
+} */
 .iris:after {
   content: "";
   display: block;
