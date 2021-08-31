@@ -16,13 +16,26 @@ const adviceField = document.getElementById("question");
 
 //User clicking the advise button
 const adviceBtn = document.getElementById("submit");
-const adviceTxt = document.querySelector("p");
+const adviceTxt = document.getElementById("advice");
+const inputStuff = document.getElementById("input-stuff");
+const againBtn = document.getElementById("again");
 
 //Function that allows answer to be populated
 adviceBtn.addEventListener("click", function() {
   let randomNum = Math.floor(Math.random() * 6);
   adviceTxt.innerHTML = (advice[randomNum]);
-  adviceField.value = " ";
+  adviceField.value = "";
   // toggle the animation class
   document.getElementById("iris").classList.toggle("animate");
+  document.getElementById("iris-2").classList.toggle("animate-2");
+  document.getElementById("question").classList.toggle("hide");
+  document.getElementById("again").classList.toggle("hide");
+})
+
+againBtn.addEventListener("click", function() {
+  // toggle the animation class
+  // document.getElementById("iris-2").classList.toggle("animate-3");
+  document.getElementById("question").classList.toggle("hide");
+  document.querySelector("#submit").value = "Ask another";
+  document.getElementById("again").classList.toggle("hide");
 })
