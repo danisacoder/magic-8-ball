@@ -23,4 +23,6 @@ adviceBtn.addEventListener("click", function() {
   let randomNum = Math.floor(Math.random() * 6);
   adviceTxt.innerHTML = (advice[randomNum]);
   adviceField.value = " ";
+  // toggle the animation class
+  document.getElementById("iris").classList.toggle("animate");
 })
